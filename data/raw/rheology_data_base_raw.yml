@@ -1,0 +1,70 @@
+#Dic_rheo={'Constant'              :  'Linear', 
+#          'Hirth_Dry_Olivine_diff' :  'Diffusion_DryOlivine',
+#          'Hirth_Dry_Olivine_disl' :  'Dislocation_DryOlivine',
+#          'Van_Keken_diff'         :  'Diffusion_vanKeken',
+#          'Van_Keken_disl'         :  'Dislocation_vanKeken',
+#          'Hirth_Wet_Olivine_diff' :  'Diffusion_WetOlivine',
+#          'Hirth_Wet_Olivine_disl' :  'Dislocation_WetOlivine',
+#          'WetPlagio_diff' : 'Diffusion_WetPlagio',
+#          'WetPlagio_disl' :'Dislocation_WetPlagio',
+#          'Serpentinite_disl' : 'Dislocation_serpentinite',
+#         'WetQuartzite_disl' : 'Dislocation_wetquartzite',
+#          'Glaucophane_disl'  : 'Dislocation_glaucophane'
+#          }
+#
+#
+#
+#
+
+
+
+Diffusion_creep: 
+  n: 1
+  Diffusion_DryOlivine: 
+    B: 1.5e9
+    E: 375.0e3
+    V: 5e-6
+    F: 'SimpleShear'
+    d0: 10e3
+    MPa: 1
+    r: 0
+    m: 3.0
+    B_SI: 'MPa^-1s^-1'
+    water_correction: 'None'
+    ref: 'Hirth, Greg, and David Kohlstedt. "Rheology of the upper mantle and the mantle wedge: A view from the experimentalists." Geophysical monograph series 138 (2003): 83-105.'
+  Diffusion_WetOlivine: 
+    B: 2.7e7
+    E: 375.0e3
+    V: 10e-6
+    F: 'SimpleShear'
+    d0: 10e3
+    MPa: 1
+    r: 0.8
+    m: 3.0
+    B_SI: 'MPa^-1 s^-1 COH^-r'
+    water_correction: 'COH'
+    ref: 'Hirth, Greg, and David Kohlstedt. "Rheology of the upper mantle and the mantle wedge: A view from the experimentalists." Geophysical monograph series 138 (2003): 83-105.'
+  
+  
+  
+  
+  
+  
+  
+Dislocation_creep:
+  m = 0.0 
+  
+  Dislocation_WetPlagio: 
+    B: 2.7e7
+    E: 345.0e3
+    V: 38e-6
+    F: 'Uniaxial'
+    d0: 10e3
+    MPa: 1
+    r: 0.0
+    n: 3.0
+    B_SI: 'MPa^-1 s^-n'
+    water_correction: 'None'
+    ref: 'later'
+    note: 'Data have been pre-processed in the original source. Water is not explicitly listed'
+  
